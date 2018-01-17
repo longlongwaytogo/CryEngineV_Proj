@@ -1,0 +1,28 @@
+<UIElements name="HUD">  
+  <UIElement name="NewHUD" render_lockless="1">       
+    <GFx file="NewHUD.swf" layer="1">  
+      <Constraints>  
+         <Align mode="dynamic" valign="center" halign="center" scale="1" max="0" />  
+      </Constraints>  
+    </GFx>      
+    <functions>  
+        <function name="SetWeapon" desc="" funcname="setCurrentWeapon">  
+            <param name="WeaponName" desc="" type="string"/>  
+            <param name="AmmoName" desc="" type="string"/>  
+        </function>  
+          
+        <function name ="SetAmmo" desc="" funcname="setAmmo">  
+            <param name="CurrAmmo" desc="" type="int"/>  
+            <param name="MaxAmmo" desc="" type="int"/>  
+        </function>  
+    </functions>  
+      
+    <MovieClips>  
+        <MovieClip name="HealthBar" desc="" instancename="healthMC"/>  
+    </MovieClips>  
+      
+    <Variables>  
+        <Variable name="HealthValue" desc="" varname="healthMC.currHealth.text"/>  
+    </Variables>  
+  </UIElement>     
+</UIElements>  

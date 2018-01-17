@@ -1,0 +1,125 @@
+<Graph Description="" Group="fg" enabled="1" MultiPlayer="ClientServer">
+ <Nodes>
+  <Node Id="1" Class="Game:Start" pos="-1150,-30,0" flags="0">
+   <Inputs InGame="1" InEditor="1"/>
+  </Node>
+  <Node Id="2" Class="UI:Display:Display" pos="-570,-120,0" flags="0">
+   <Inputs uiElements_Element="NewHUD" instanceID="-1"/>
+  </Node>
+  <Node Id="3" Class="Actor:LocalPlayer" pos="-760,-370,0" flags="0">
+   <Inputs />
+  </Node>
+  <Node Id="12" Class="Debug:DisplayMessage" pos="-370,-380,0" flags="0">
+   <Inputs entityId="0" message="" DisplayTime="0" posX="50" posY="50" fontSize="2" clr_Color="1,1,1" centered="0"/>
+  </Node>
+  <Node Id="14" Class="Actor:HealthGet" pos="-570,-380,0" flags="0">
+   <Inputs entityId="0"/>
+  </Node>
+  <Node Id="32" Class="Debug:InputKey" pos="-1130,520,0" flags="0">
+   <Inputs entityId="0" Key="k" NonDevMode="0"/>
+  </Node>
+  <Node Id="33" Class="UI:Functions:NewHUD:SetAmmo" pos="-150,540,0" flags="0">
+   <Inputs instanceID="-1" CurrAmmo="12" MaxAmmo="20"/>
+  </Node>
+  <Node Id="35" Class="Debug:InputKey" pos="-1130,660,0" flags="0">
+   <Inputs entityId="0" Key="l" NonDevMode="0"/>
+  </Node>
+  <Node Id="36" Class="UI:Functions:NewHUD:SetWeapon" pos="-610,680,0" flags="0">
+   <Inputs instanceID="-1" WeaponName="huojian" AmmoName="changzheng"/>
+  </Node>
+  <Node Id="37" Class="Debug:InputKey" pos="-1130,820,0" flags="0">
+   <Inputs entityId="0" Key="m" NonDevMode="0"/>
+  </Node>
+  <Node Id="38" Class="UI:MovieClip:GotoAndPlay" pos="-390,840,0" flags="0">
+   <Inputs uiMovieclips_MovieClips="NewHUD:HealthBar" instanceID="-1" FrameId="-1" FrameName=""/>
+  </Node>
+  <Node Id="42" Class="String:SetString" pos="-570,840,0" flags="0">
+   <Inputs In=""/>
+  </Node>
+  <Node Id="43" Class="Debug:DisplayMessage" pos="-360,1010,0" flags="0">
+   <Inputs entityId="0" message="" DisplayTime="0" posX="50" posY="100" fontSize="2" clr_Color="1,1,1" centered="0"/>
+  </Node>
+  <Node Id="56" Class="Math:Counter" pos="-880,900,0" flags="0">
+   <Inputs max="100"/>
+  </Node>
+  <Node Id="58" Class="Math:Sub" pos="-700,920,0" flags="0">
+   <Inputs A="100" B="0"/>
+  </Node>
+  <Node Id="62" Class="Debug:Frame" pos="-1210,-410,0" flags="0"/>
+  <Node Id="63" Class="Math:Counter" pos="-610,580,0" flags="0">
+   <Inputs max="20"/>
+  </Node>
+  <Node Id="64" Class="Math:Sub" pos="-380,590,0" flags="0">
+   <Inputs A="20" B="0"/>
+  </Node>
+  <Node Id="65" Class="UI:Events:SimpleMenu:OnButton" pos="-1160,1330,0" flags="0">
+   <Inputs instanceID="-1" Port="0" Idx="open"/>
+  </Node>
+  <Node Id="66" Class="UI:Events:SimpleMenu:OnButton" pos="-1160,1530,0" flags="0">
+   <Inputs instanceID="-1" Port="0" Idx="close"/>
+  </Node>
+  <Node Id="68" Class="Debug:DisplayMessage" pos="-590,1520,0" flags="0">
+   <Inputs entityId="0" message="" DisplayTime="0" posX="150" posY="100" fontSize="2" clr_Color="1,1,1" centered="0"/>
+  </Node>
+  <Node Id="69" Class="Debug:DisplayMessage" pos="-590,1310,0" flags="0">
+   <Inputs entityId="0" message="" DisplayTime="0" posX="150" posY="50" fontSize="2" clr_Color="1,1,1" centered="0"/>
+  </Node>
+  <Node Id="70" Class="UI:Display:Display" pos="-940,-120,0" flags="0">
+   <Inputs uiElements_Element="SimpleMenu" instanceID="-1"/>
+  </Node>
+  <Node Id="74" Class="String:SetString" pos="-850,1380,0" flags="0">
+   <Inputs In="Open"/>
+  </Node>
+  <Node Id="75" Class="String:SetString" pos="-860,1570,0" flags="0">
+   <Inputs In="Close"/>
+  </Node>
+  <Node Id="76" Name="Button_Menu" Class="_commentbox" pos="-1220,1252.4838,0" flags="0">
+   <Inputs TextSize="1" Color="0.27451,0.352941,0.705882" DisplayFilled="1" DisplayBox="1" SortPriority="16"/>
+   <ResizeBorder X="0" Y="0" Width="880" Height="450"/>
+   <NodeSize Width="880" Height="505.30154"/>
+  </Node>
+  <Node Id="80" Name="Load_UI_Resource_" Class="_commentbox" pos="-1190,-207.45461,0" flags="0">
+   <Inputs TextSize="1" Color="0.27451,0.352941,0.705882" DisplayFilled="1" DisplayBox="1" SortPriority="16"/>
+   <ResizeBorder X="0" Y="0" Width="970" Height="450"/>
+   <NodeSize Width="970" Height="505.30154"/>
+  </Node>
+  <Node Id="83" Class="Debug:DisplayMessage" pos="-900,90,0" flags="0">
+   <Inputs entityId="0" message="K: reduce Ammo ,l:  show name; m:  reduce health" DisplayTime="0" posX="50" posY="450" fontSize="2" clr_Color="1,1,1" centered="0"/>
+  </Node>
+  <Node Id="84" Name="Input_" Class="_commentbox" pos="-1220,387.94403,0" flags="0">
+   <Inputs TextSize="1" Color="0.27451,0.352941,0.705882" DisplayFilled="1" DisplayBox="1" SortPriority="16"/>
+   <ResizeBorder X="0" Y="0" Width="1640" Height="850"/>
+   <NodeSize Width="1640" Height="905.30157"/>
+  </Node>
+ </Nodes>
+ <Edges>
+  <Edge nodeIn="2" nodeOut="1" portIn="show" portOut="output" enabled="1"/>
+  <Edge nodeIn="70" nodeOut="1" portIn="show" portOut="output" enabled="1"/>
+  <Edge nodeIn="83" nodeOut="1" portIn="Show" portOut="output" enabled="1"/>
+  <Edge nodeIn="14" nodeOut="3" portIn="Trigger" portOut="entityId" enabled="1"/>
+  <Edge nodeIn="14" nodeOut="3" portIn="entityId" portOut="entityId" enabled="1"/>
+  <Edge nodeIn="12" nodeOut="14" portIn="Show" portOut="Health" enabled="1"/>
+  <Edge nodeIn="12" nodeOut="14" portIn="message" portOut="Health" enabled="1"/>
+  <Edge nodeIn="33" nodeOut="32" portIn="Call" portOut="Pressed" enabled="1"/>
+  <Edge nodeIn="63" nodeOut="32" portIn="in" portOut="Pressed" enabled="1"/>
+  <Edge nodeIn="36" nodeOut="35" portIn="Call" portOut="Pressed" enabled="1"/>
+  <Edge nodeIn="42" nodeOut="37" portIn="Set" portOut="Pressed" enabled="1"/>
+  <Edge nodeIn="56" nodeOut="37" portIn="in" portOut="Pressed" enabled="1"/>
+  <Edge nodeIn="38" nodeOut="42" portIn="FrameId" portOut="Out" enabled="1"/>
+  <Edge nodeIn="38" nodeOut="42" portIn="GotoAndStop" portOut="Out" enabled="1"/>
+  <Edge nodeIn="43" nodeOut="42" portIn="Show" portOut="Out" enabled="1"/>
+  <Edge nodeIn="43" nodeOut="42" portIn="message" portOut="Out" enabled="1"/>
+  <Edge nodeIn="58" nodeOut="56" portIn="B" portOut="count" enabled="1"/>
+  <Edge nodeIn="42" nodeOut="58" portIn="In" portOut="out" enabled="1"/>
+  <Edge nodeIn="3" nodeOut="62" portIn="update" portOut="frameid" enabled="1"/>
+  <Edge nodeIn="64" nodeOut="63" portIn="B" portOut="count" enabled="1"/>
+  <Edge nodeIn="33" nodeOut="64" portIn="CurrAmmo" portOut="out" enabled="1"/>
+  <Edge nodeIn="69" nodeOut="65" portIn="Show" portOut="onEvent" enabled="1"/>
+  <Edge nodeIn="74" nodeOut="65" portIn="Set" portOut="onEvent" enabled="1"/>
+  <Edge nodeIn="68" nodeOut="66" portIn="Show" portOut="onEvent" enabled="1"/>
+  <Edge nodeIn="75" nodeOut="66" portIn="Set" portOut="onEvent" enabled="1"/>
+  <Edge nodeIn="69" nodeOut="74" portIn="message" portOut="Out" enabled="1"/>
+  <Edge nodeIn="68" nodeOut="75" portIn="message" portOut="Out" enabled="1"/>
+ </Edges>
+ <GraphTokens />
+</Graph>
