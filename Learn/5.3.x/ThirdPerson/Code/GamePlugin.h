@@ -5,6 +5,9 @@
 #include <CryGame/IGameFramework.h>
 
 #include <CryEntitySystem/IEntityClass.h>
+#include "DWindow.h"
+
+ 
 
 class CGamePlugin 
 	: public ICryPlugin

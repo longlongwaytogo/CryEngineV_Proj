@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LocalDebuggerWorkingDirectory>E:\project\CryEngine\CRYENGINE-release5.3\CRYENGINE-release\bin\win_x64-debug</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+    <LocalDebuggerCommand>E:\project\CryEngine\CRYENGINE-release5.3\CRYENGINE-release\bin\win_x64-debug\Win32Editor.exe</LocalDebuggerCommand>
+  </PropertyGroup>
+</Project>

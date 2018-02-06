@@ -50,6 +50,39 @@
      </Component>
     </Components>
    </Object>
+   <Object Type="GeomEntity" Layer="Main" LayerGUID="{1DD3A559-E494-4742-A501-7DAB4AFBBF72}" Id="{939BAD03-9A11-589C-A9B5-1030A7F08B49}" Name="primitive_cube1" Pos="66.331032,52.076572,32.016178" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" Geometry="" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" DynamicDistanceShadows="0" GIMode="0" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" EntityClass="GeomEntity" HasEntity="1">
+    <Properties />
+    <Components>
+     <Component typeId="{17E5EBA7-57E4-4662-A1C2-1F41DE946CDA}"/>
+     <Component typeId="{54B2C130-8E27-4E07-8BF0-F1FE89228D14}">
+      <Geometry value="Objects/Default/primitive_cube.cgf"/>
+      <Physicalize value="ePhysicalizationType_Static"/>
+      <ReceiveCollisionEvents value="false"/>
+      <Mass value="1"/>
+      <Animation value=""/>
+      <Speed value="1"/>
+      <Loop value="true"/>
+     </Component>
+    </Components>
+    <FlowGraph Description="" Group="RotateBox" enabled="1" MultiPlayer="ClientServer">
+     <Nodes>
+      <Node Id="2" Class="Time:Time" pos="-190,-20,0" flags="0">
+       <Inputs paused="0"/>
+      </Node>
+      <Node Id="4" Class="Movement:RotateEntity" pos="180,-20,0" flags="0" GraphEntity="0">
+       <Inputs entityId="0" Speed="0,50,0" Paused="0" Ref="0"/>
+      </Node>
+      <Node Id="5" Class="Vec3:SetVec3" pos="10,0,0" flags="0">
+       <Inputs In="0,0,100"/>
+      </Node>
+     </Nodes>
+     <Edges>
+      <Edge nodeIn="5" nodeOut="2" portIn="Set" portOut="tick" enabled="1"/>
+      <Edge nodeIn="4" nodeOut="5" portIn="Speed" portOut="Out" enabled="1"/>
+     </Edges>
+     <GraphTokens />
+    </FlowGraph>
+   </Object>
    <Object Type="Designer" Layer="Main" LayerGUID="{1DD3A559-E494-4742-A501-7DAB4AFBBF72}" Id="{A06BF249-0BCF-40BF-9723-5020D2701400}" Name="Designer Box4" Pos="70.572311,56.479603,32.016178" FloorNumber="-1" Rotate="1,0,0,0" Scale="7.8245997,1.3964999,1" ColorRGB="16777215" Material="Materials/objects" RndFlags="1073741832" StaticObjFlags="0" ViewDistRatio="100">
     <Brush DesignerModeFlags="0" SubdivisionLevel="0" SubdivisionSmoothingGroup="0" MirrorPlaneNormal="0,0,0" MirrorPlaneDistance="0">
      <Polygon GUID="{6BBD580A-FF8D-4264-A5A7-F0F94A0C7D84}" BinaryData="BAAAAJWO0IQYcve/sObJqC2aH0AAAAAAAACwvJWO0IQYcve/sObJqC2aH0AAAAAAAAAQwJWO0IQYcve//v///yuaH8AAAAAAAAAQwJWO0IQYcve//v///yuaH8AAAAAAAACwvAQAAAAAAAAAAQAAAAEAAAACAAAAAgAAAAMAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIA/AACAPwAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAAAAAACVjtCEGHL3v23R/MAAAIAlbdH8wAAAgEBg0fxAAACAQGDR/EAAAIAl"/>

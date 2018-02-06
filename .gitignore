@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+/Learn/5.3.x/ThirdPerson/user(1)
+/Learn/5.3.x/ThirdPerson/user
+/Learn/5.3.x/ThirdPerson/logbackups
+/Learn/5.3.x/ThirdPerson/Editor
+*.bak2
+*.bak

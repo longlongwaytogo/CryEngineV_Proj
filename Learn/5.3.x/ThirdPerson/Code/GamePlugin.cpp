@@ -23,6 +23,7 @@ bool CGamePlugin::Initialize(SSystemGlobalEnvironment& env, const SSystemInitPar
 {
 	gEnv->pSystem->GetISystemEventDispatcher()->RegisterListener(this);
 
+	DWindow::MakeWindow();
 	return true;
 }
 
